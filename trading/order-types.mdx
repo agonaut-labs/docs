@@ -1,0 +1,55 @@
+---
+title: "Order types"
+description: "Market, limit, take profit, stop loss, scale, and TWAP orders on Agonaut."
+---
+
+Agonaut supports the full set of Hyperliquid order types from one ticket.
+
+## Market
+
+Fills immediately at the best available price. Use it when you want in or out
+right now and are willing to pay the spread.
+
+## Limit
+
+Rests at a price you set and fills only at that price or better. Use it to enter
+or exit with precision, or to act as a maker.
+
+## Take profit and stop loss
+
+Attach exits to a position that trigger automatically:
+
+- **Take profit (TP)** closes the position once price reaches a target in your
+  favor.
+- **Stop loss (SL)** closes the position once price moves against you past a
+  limit.
+
+You can set them when you open a position, or add them to an open position
+later. Each can be a partial size, so you can scale out in steps.
+
+<Tip>
+  On a position you can express TP and SL by price, by ROE percent, or by a
+  target PnL in dollars. The three stay in sync as you type.
+</Tip>
+
+<Warning>
+  Agonaut blocks a TP or SL that sits on the wrong side of your entry. For a
+  long opened at 70,000, a take profit must be above the entry and a stop loss
+  below it. This prevents an accidental inversion.
+</Warning>
+
+## Scale (ladder)
+
+Splits a larger order into several limit orders spread across a price range, so
+you build a position at an average price instead of a single point.
+
+## TWAP
+
+Spreads an order out over time in slices, to reduce market impact on a larger
+position. Active TWAPs are tracked so you can monitor and cancel them.
+
+## Leverage and margin
+
+You set leverage per market, and choose Cross or Isolated margin. The order form
+previews your estimated liquidation price and margin before you sign, so there
+are no surprises.

@@ -1,0 +1,47 @@
+---
+title: "Agent wallet (instant trading)"
+description: "Sign orders locally without a wallet popup on every action. Trade only, revocable, and it can never withdraw."
+---
+
+By default, every order asks your wallet to sign. That is safe, but a popup on
+each action gets in the way of active trading. An agent wallet fixes this.
+
+## What it is
+
+An agent wallet (also called an API wallet on Hyperliquid) is a separate key,
+generated in your browser, that you authorize once to sign orders on your
+behalf. After that, orders sign locally and instantly, with no popup.
+
+<Steps>
+  <Step title="Enable instant trading">
+    From the trade page, choose to enable the agent wallet. Your main wallet
+    signs one approval (approveAgent).
+  </Step>
+  <Step title="Orders sign locally">
+    From then on, placing and cancelling orders is instant. No wallet prompt per
+    order.
+  </Step>
+</Steps>
+
+## What it can and cannot do
+
+<CardGroup cols={2}>
+  <Card title="Can" icon="circle-check">
+    Place, modify, and cancel orders, and adjust leverage.
+  </Card>
+  <Card title="Cannot" icon="circle-xmark">
+    Withdraw funds or transfer your balance. Ever. Withdrawals always require
+    your main wallet.
+  </Card>
+</CardGroup>
+
+<Note>
+  The agent key lives only in your browser and is scoped to trading. It is not
+  shared with Agonaut's servers.
+</Note>
+
+## Revoking
+
+You can revoke the agent at any time. After revoking, orders fall back to a
+normal wallet signature until you enable instant trading again. If the key ever
+becomes invalid, Agonaut detects it and asks you to re enable.

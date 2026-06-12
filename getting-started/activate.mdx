@@ -1,0 +1,46 @@
+---
+title: "Activate trading"
+description: "One signature enables trading on Agonaut and starts your points. Here is exactly what it does."
+---
+
+Before your first trade, Agonaut asks for a one time approval. This is what
+connects your trading to Agonaut so your volume earns points and rewards.
+
+## What you are approving
+
+You approve a **builder fee** of 0.030% to Agonaut's builder address on
+Hyperliquid. This is a Hyperliquid native feature: a builder fee is a small,
+capped fee that an app can collect on the volume it routes, and you approve the
+maximum rate up front.
+
+<Steps>
+  <Step title="Open the trade page">
+    The activation prompt appears the first time you trade, or on your account
+    page.
+  </Step>
+  <Step title="Sign the approval">
+    Your wallet signs an approveBuilderFee message setting the cap at 0.030%.
+    This is a signature, not a transfer.
+  </Step>
+  <Step title="Trading is live">
+    You can now place orders, and your volume counts toward points and the
+    leaderboard.
+  </Step>
+</Steps>
+
+<Note>
+  The fee is a cap, not a charge on signing. You are charged the 0.030% only on
+  actual trades, taken by Hyperliquid at fill time. Approving costs nothing.
+</Note>
+
+## Why a fee at all
+
+That 0.030% is what funds the whole reward engine. The large majority of it
+flows straight back to traders as competition prizes and referral payouts. See
+[Fees](/fees) for where every basis point goes.
+
+## Optional: instant trading
+
+After activating, you can enable an [agent wallet](/trading/agent-wallet) so
+that orders sign locally without a wallet popup on every action. It is one extra
+signature, fully revocable, and it can never withdraw your funds.

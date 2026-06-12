@@ -1,0 +1,57 @@
+---
+title: "Security"
+description: "How Agonaut keeps you in control: non custodial by design, scoped signing, and no access to your funds."
+---
+
+Agonaut is built so that you, and only you, control your funds. We never hold
+custody.
+
+## Non custodial by design
+
+Every action that moves value, a trade, a deposit, a withdrawal, is signed by
+your own wallet and settled on Hyperliquid. Agonaut relays your signed actions.
+It cannot create them for you.
+
+<CardGroup cols={2}>
+  <Card title="Agonaut cannot" icon="circle-xmark">
+    Move your funds, withdraw on your behalf, or trade without your signature.
+  </Card>
+  <Card title="You always" icon="circle-check">
+    Hold your keys, sign your own actions, and can withdraw at any time.
+  </Card>
+</CardGroup>
+
+## Email sign in is still self custodial
+
+If you sign in with email, the embedded wallet's private key is split across
+secure enclaves so that no single party, including Agonaut and including the
+login provider, can reconstruct it alone. You can export the key whenever you
+want.
+
+## The agent wallet is scoped
+
+The optional [agent wallet](/trading/agent-wallet) that enables instant trading
+can place and cancel orders only. It can never withdraw or transfer funds.
+Withdrawals always require your main wallet. You can revoke the agent at any
+time.
+
+## Good practice
+
+<Steps>
+  <Step title="Protect your wallet">
+    Keep your seed phrase or exported key offline and private. Agonaut will
+    never ask for it.
+  </Step>
+  <Step title="Verify what you sign">
+    Read signature prompts. Login messages are free and move nothing. Only
+    trades and withdrawals move value.
+  </Step>
+  <Step title="Withdraw to addresses you control">
+    The withdrawal destination is part of the signed action. Double check it.
+  </Step>
+</Steps>
+
+<Warning>
+  Trading perpetual futures with leverage carries real risk of loss. Security of
+  your wallet is separate from market risk. Manage both.
+</Warning>

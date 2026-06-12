@@ -1,0 +1,64 @@
+---
+title: "Connect"
+description: "Sign in to Agonaut with a browser wallet or with email. Both are self custodial."
+---
+
+There are two ways to sign in. Both keep you in full control of your funds.
+
+<Tabs>
+  <Tab title="Browser wallet">
+    Use any EVM browser extension, MetaMask, Rabby, Phantom, OKX, or Coinbase
+    Wallet.
+
+    <Steps>
+      <Step title="Click Connect">
+        Open the connect modal and pick your wallet from the detected list.
+      </Step>
+      <Step title="Sign the login message">
+        Your wallet asks you to sign a short message (Sign in with Ethereum).
+        This proves you own the wallet. It is not a transaction and costs
+        nothing.
+      </Step>
+      <Step title="You are in">
+        Your address appears in the top bar. No password, no account to create.
+      </Step>
+    </Steps>
+
+    <Tip>
+      Wallet sign in is the lightest option. Nothing is shared with any third
+      party login provider.
+    </Tip>
+  </Tab>
+  <Tab title="Email">
+    Prefer not to install a wallet? Sign in with email or Google. Agonaut
+    creates a secure embedded wallet for you automatically, so you are still
+    self custodial.
+
+    <Steps>
+      <Step title="Choose Continue with email">
+        Enter your email or use Google.
+      </Step>
+      <Step title="Verify">
+        Confirm the one time code sent to your inbox.
+      </Step>
+      <Step title="Your wallet is ready">
+        An embedded wallet is created and linked to your login. You can export
+        its private key at any time.
+      </Step>
+    </Steps>
+
+    <Note>
+      Email sign in is powered by Privy. The private key is split across secure
+      enclaves so that no single party, including Agonaut, can move your funds.
+    </Note>
+  </Tab>
+</Tabs>
+
+## What signing in does not do
+
+- It does not move any funds.
+- It does not give Agonaut access to your wallet.
+- It does not approve any spending.
+
+The only thing that enables trading is a separate one time approval, covered in
+[Activate](/getting-started/activate).

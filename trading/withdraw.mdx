@@ -1,0 +1,33 @@
+---
+title: "Withdraw"
+description: "Move USDC out of your Hyperliquid balance back to a wallet on Arbitrum."
+---
+
+Withdrawals always settle to a wallet on Arbitrum and are always signed by your
+main wallet, never by an agent.
+
+<Steps>
+  <Step title="Open Withdraw">
+    Enter the amount of USDC to withdraw.
+  </Step>
+  <Step title="Choose a destination">
+    It defaults to your own connected wallet. You can send to any address, and
+    the destination is part of the signed action, so Hyperliquid enforces
+    exactly what you approved.
+  </Step>
+  <Step title="Sign with your main wallet">
+    An agent wallet cannot withdraw. Withdrawals require your main wallet
+    signature by design.
+  </Step>
+</Steps>
+
+## Fee and timing
+
+- A flat fee of 1 USDC applies, taken by Hyperliquid, and is deducted from the
+  amount.
+- Withdrawals typically finalize in around five minutes.
+
+<Note>
+  Because withdrawals require your main wallet and the destination is signed,
+  enabling instant trading never puts your funds at risk.
+</Note>
